@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] White space
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C873a21q2kh.fsf%40sopos.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000007.html">
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] White space</H1>
+    <B>Oliver Heins</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C873a21q2kh.fsf%40sopos.org%3E"
+       TITLE="[Ledmac-users] White space">heins at sopos.org
+       </A><BR>
+    <I>Tue Jan 19 21:09:34 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000007.html">[Ledmac-users] White space
+</A></li>
+        <LI>Next message: <A HREF="000010.html">[Ledmac-users] White space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Arash,
+
+the problem lies within your use of \SingleSpacing and \DoubleSpacing.
+When I set the \baselineskip manually instead, everything seems to
+work.  When you change these lines to \baselineskip=10pt
+resp. \baselineskip=20pt everything works.
+
+Personally, I don't use the memoir class.  You should perhaps ask on
+their mailing list (if their is any) or in comp.text.tex.
+
+HTH,
+ olli
+
+Arash Zeini &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">arash.zeini at gmail.com</A>&gt; writes:
+
+&gt;<i> On Wednesday 09 December 2009, Oliver Heins wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> arash.zeini at gmail.com (Arash Zeini) writes:
+</I>&gt;&gt;<i> &gt; Dear All,
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; I have the pleasure of posting the first question :)
+</I>&gt;&gt;<i> &gt; I am using the following code from one of the ledmac examples to format
+</I>&gt;&gt;<i> &gt; my critical notes:
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; \renewcommand*{\threecolfootfmt}[3]{%
+</I>&gt;&gt;<i> &gt; \singlespacing
+</I>&gt;&gt;<i> &gt; \normal at pars
+</I>&gt;&gt;<i> &gt; \hsize .3\hsize
+</I>&gt;&gt;<i> &gt; \setlength{\parindent}{0pt}
+</I>&gt;&gt;<i> &gt; \tolerance=5000
+</I>&gt;&gt;<i> &gt; \raggedright
+</I>&gt;&gt;<i> &gt; \hangindent2.5em \hangafter1
+</I>&gt;&gt;<i> &gt; \leavevmode
+</I>&gt;&gt;<i> &gt; \strut\hbox to 1.3em{\notenumfont\printlines#1|\hfil}\ignorespaces
+</I>&gt;&gt;<i> &gt; {\select at lemmafont#1|#2}\rbracket\enskip
+</I>&gt;&gt;<i> &gt; #3\strut\par\allowbreak}
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; How can I control the amount of white space between each critical note?
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; Many thanks and regards,
+</I>&gt;&gt;<i> &gt; Arash
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Hi Arash,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> can you post a minimal *working* example (i.e. with preamble,
+</I>&gt;&gt;<i> \begin{document}...\end{document} and such stuff)?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Regards,
+</I>&gt;&gt;<i>  olli
+</I>&gt;&gt;<i> 
+</I>&gt;<i>
+</I>&gt;<i> Hi Oliver,
+</I>&gt;<i>
+</I>&gt;<i> I am sorry it took me so long to reply. I am attaching the simplest possible 
+</I>&gt;<i> example that reproduces my critical apparatus (CA). So, the question is:
+</I>&gt;<i>
+</I>&gt;<i> 1. How can I reduce the white space between two separate entries in the CA? 
+</I>&gt;<i> \interparanoteglue{1em plus .4em minus .4em} is of no use since I am not using 
+</I>&gt;<i> paragraph footnotes.
+</I>&gt;<i>
+</I>&gt;<i> Now that we are at it, let me add two more questions:
+</I>&gt;<i>
+</I>&gt;<i> 2. How can I reduce the white space between the first entry in the CA and the 
+</I>&gt;<i> footnote rule? If you compare the first entry for line 3 with the first entry 
+</I>&gt;<i> for line 1, you will notice that entry 3 is positioned higher. Where is the 
+</I>&gt;<i> white space in the first entry coming from? 
+</I>&gt;<i>
+</I>&gt;<i> 3. How can I add &quot;automatic&quot; indentation for any second lines in the CA that 
+</I>&gt;<i> break into the next line? See second line of the first entry.
+</I>&gt;<i>
+</I>&gt;<i> Thanks and best wishes,
+</I>&gt;<i> Arash
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Ledmac-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>
+-- 
+Oliver Heins <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">heins at sopos.org</A>    <A HREF="http://oliverheins.net/">http://oliverheins.net/</A>
+<A HREF="http://blog.overheins.net/">http://blog.overheins.net/</A>     F27A BA8C 1CFB B905 65A8
+<A HREF="http://scriptorium-adp.de/">http://scriptorium-adp.de/</A>     2544 0F07 B675 9A00 D827
+1024D/9A00D827 2004-09-24 -- gpg --recv-keys 0x9A00D827
+Please avoid sending me Word or PowerPoint attachments:
+<A HREF="http://www.gnu.org/philosophy/no-word-attachments.html">http://www.gnu.org/philosophy/no-word-attachments.html</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000007.html">[Ledmac-users] White space
+</A></li>
+	<LI>Next message: <A HREF="000010.html">[Ledmac-users] White space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

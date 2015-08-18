@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] lowered periods in headings after long dash
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-September/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20lowered%20periods%20in%20headings%20after%20long%20dash&In-Reply-To=%3CAANLkTim6Ry8y2KvPBoJoQTbfZArkzmBGpQAg0ZkNMAP4%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000028.html">
+   <LINK REL="Next"  HREF="000030.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] lowered periods in headings after long dash</H1>
+    <B>John McChesney-Young</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20lowered%20periods%20in%20headings%20after%20long%20dash&In-Reply-To=%3CAANLkTim6Ry8y2KvPBoJoQTbfZArkzmBGpQAg0ZkNMAP4%40mail.gmail.com%3E"
+       TITLE="[Ledmac-users] lowered periods in headings after long dash">jmccyoung at gmail.com
+       </A><BR>
+    <I>Sat Sep 18 23:47:31 CEST 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000028.html">[Ledmac-users] lowered periods in headings after long dash
+</A></li>
+        <LI>Next message: <A HREF="000030.html">[Ledmac-users] lowered periods in headings after long dash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#29">[ date ]</a>
+              <a href="thread.html#29">[ thread ]</a>
+              <a href="subject.html#29">[ subject ]</a>
+              <a href="author.html#29">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>You can use \raisebox. In your example:
+
+...
+\begin{center}
+\edt{Letter 1}{\A{blah}}
+\linebreak\linebreak
+To the \edt{Countess of ------}{\B{blahblahblah}}\raisebox{-1ex}{.}
+%Probably way too low, but it will give you the idea and you can
+adjust the value of ex until it looks right to you
+\linebreak\linebreak\linebreak
+\end{center}
+...
+
+John
+
+***
+
+On Sat, Sep 18, 2010 at 2:05 PM,  &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">crebecca at uchicago.edu</A>&gt; wrote:
+&gt;<i> How I get this:
+</I>&gt;<i>
+</I>&gt;<i> To the Countess of ------.
+</I>&gt;<i>
+</I>&gt;<i> but with the period slightly lowered, so it doesn't look adrift?
+</I>&gt;<i>...
+</I>
+-- 
+John McChesney-Young ** Berkeley, California, U.S.A.
+JMcCYoung~at~gmail.com ** <A HREF="http://twitter.com/jmccyoung">http://twitter.com/jmccyoung</A> **
+<A HREF="http://jmccyoung.blogspot.com/">http://jmccyoung.blogspot.com/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000028.html">[Ledmac-users] lowered periods in headings after long dash
+</A></li>
+	<LI>Next message: <A HREF="000030.html">[Ledmac-users] lowered periods in headings after long dash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#29">[ date ]</a>
+              <a href="thread.html#29">[ thread ]</a>
+              <a href="subject.html#29">[ subject ]</a>
+              <a href="author.html#29">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

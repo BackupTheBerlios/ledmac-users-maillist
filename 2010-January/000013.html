@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] White space
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C201001242313.20728.arash.zeini%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000012.html">
+   <LINK REL="Next"  HREF="000009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] White space</H1>
+    <B>Arash Zeini</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C201001242313.20728.arash.zeini%40gmail.com%3E"
+       TITLE="[Ledmac-users] White space">arash.zeini at gmail.com
+       </A><BR>
+    <I>Mon Jan 25 00:13:20 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000012.html">[Ledmac-users] White space
+</A></li>
+        <LI>Next message: <A HREF="000009.html">[Ledmac-users] alphanumeric variable before linenumber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thank you very much for your help, Oliver!
+
+Best,
+Arash
+
+On Wednesday 20 January 2010, Oliver Heins wrote:
+&gt;<i> Arash Zeini &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">arash.zeini at gmail.com</A>&gt; writes:
+</I>&gt;<i> &gt; On Tuesday 19 January 2010, Oliver Heins wrote:
+</I>&gt;<i> &gt;&gt; the problem lies within your use of \SingleSpacing and \DoubleSpacing.
+</I>&gt;<i> &gt;&gt; When I set the \baselineskip manually instead, everything seems to
+</I>&gt;<i> &gt;&gt; work.  When you change these lines to \baselineskip=10pt
+</I>&gt;<i> &gt;&gt; resp. \baselineskip=20pt everything works.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thank you very much. Yes, this takes care of problem no. 1 and 2.
+</I>&gt;<i> &gt; However, as you can see in the snapshot, it leaves me with some uneven
+</I>&gt;<i> &gt; spacing!
+</I>&gt;<i> 
+</I>&gt;<i> Yes, that's why I suggested asking on the memoir list.
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Does this also mean that the spacing between the lines of an entry cannot
+</I>&gt;<i> &gt; differ from that between two entries? That's what I was hoping to
+</I>&gt;<i> &gt; achieve.
+</I>&gt;<i> 
+</I>&gt;<i> This should fit your needs, although it's a little hackish and not very
+</I>&gt;<i> tidy.
+</I>&gt;<i> 
+</I>&gt;<i> \renewcommand*{\twocolfootfmt}[3]{%
+</I>&gt;<i>   \baselineskip=10pt
+</I>&gt;<i> \<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">normal at pars</A>
+</I>&gt;<i> \hsize .3\hsize
+</I>&gt;<i> \setlength{\parindent}{0pt}
+</I>&gt;<i> \tolerance=5000
+</I>&gt;<i> \raggedright
+</I>&gt;<i> \hangindent2.5em \hangafter1
+</I>&gt;<i> \leavevmode
+</I>&gt;<i> \strut\hbox to 1.3em{\notenumfont\printlines#1|\hfil}\ignorespaces
+</I>&gt;<i> {\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">select at lemmafont</A>#1|#2}\rbracket\enskip
+</I>&gt;<i> #3\strut\par\allowbreak
+</I>&gt;<i> \vspace{5pt}% added
+</I>&gt;<i> }
+</I>&gt;<i> 
+</I>&gt;<i> \newcommand{\calibreak}{\\\hangindent2.5em \hangafter1 % changed
+</I>&gt;<i> \hspace{1.3em}} % Defines the CA line break indent
+</I>&gt;<i> 
+</I>&gt;<i> HTH,
+</I>&gt;<i>  olli
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000012.html">[Ledmac-users] White space
+</A></li>
+	<LI>Next message: <A HREF="000009.html">[Ledmac-users] alphanumeric variable before linenumber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

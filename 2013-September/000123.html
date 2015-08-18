@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] problem with numberonlyfirstinline
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2013-September/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20problem%20with%20numberonlyfirstinline&In-Reply-To=%3C20130911140925.GB18960%40hervaeus%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000126.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] problem with numberonlyfirstinline</H1>
+    <B>Peter John Hartman</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20problem%20with%20numberonlyfirstinline&In-Reply-To=%3C20130911140925.GB18960%40hervaeus%3E"
+       TITLE="[Ledmac-users] problem with numberonlyfirstinline">phartman at luc.edu
+       </A><BR>
+    <I>Wed Sep 11 16:09:25 CEST 2013</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000126.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi folks,
+
+I recently upgraded from ledmac to eledmac.  I was happy to see that
+there is a \numberonlyfirstinline, which replaces a lot of nasty
+code.  However, I have one problem, I can't seem to figure out.  Here 
+it is:
+
+I have:
+
+\pstart
+   Secunda conclusio est quod anima est actus sive forma, quia hoc est actus 
+   \edtext{quo, adveniente}{\lemma{quo adveniente}\Afootnote{quod adveniensS}}
+   materiae \edtext{vel subiecto praesupposito, aliquid dicitur}{\lemma{vel \ldots\
+   dicitur}\Afootnote{suo supposito dans hoc S}} esse \edtext{aliquid}{\Afootnote{hoc A hoc add ET}} 
+   in actu quod non erat ante nisi in potentia.  Hoc est notum ex quid nominis. Sed per animam equi vel asini,
+   adveniente materiae, equus dicitur \edtext{actualiter}{\Afootnote{actu T}} equus cum ante non esset equus, nisi in potentia.  
+   \edtext{Et\edlabel{II01NN5} sic de asino. Non}{\lemma{Et \ldots\ Non}\Afootnote{nec ante T}} dicebamus quod
+   erat \edtext{asinus}{\Afootnote{equus AEST}}, sed quod poterat
+   esse \edtext{asinus}{\Afootnote{equus AEST}}, \edtext{igitur etc}{\Afootnote{et sic similiter de asino T}}.
+\pend
+
+\pstart
+   Item cum animatum sit substantia per se \edtext{subsistens}{\Afootnote{existens T}}
+   et, hoc aliquid. Materia autem non \edtext{est}{\Afootnote{fit S}} hoc aliquid \edtext{nec}{\Afootnote{om
+   V}} per se \edtext{subsistens}{\Afootnote{existens T}}, ut \edtext{dicit
+   Aristoteles}{\af{CFR DEAN II.1 421a2}}.
+   Sequitur quod animatum non est \edtext{simplex}{\Afootnote{simpliciter S}} materia.  Ergo animatum
+   est \edtext{substantialiter}{\Afootnote{substantia V}} compositum ex
+   materia et forma tamquam ex potentia et \edtext{actu}{\linenum{|\xlineref{II01NN5}}\lemma{Et sic de asino \ldots\ actu}\Afootnote{om V }}.
+   Et ista est compositio ex anima et corpore. Ideo oportet \edtext{vel}{\Afootnote{dicere S}}
+   quod corpus sit forma et actus animae, quod \edtext{non}{\Afootnote{nullus AEST}} potest dici, vel quod anima
+   sit actus et forma corporis, quod est
+   \edtext{propositum}{\Afootnote{compositum S}}.
+\pend
+
+Focus on the II01NN5 business.  Now, in the apparatus, with
+\numberonlyfirstinline turned on, *it will not print line numbers in
+front of the lemma associated with 'Et sic de asino \ldots\ actu'.
+With \numberonlyfirstinline turned off, *it will*.  Pretty simple!
+
+I can produce more output if you would like.  
+
+Thanks so much in advance.
+
+Peter
+
+
+  
+
+
+-- 
+sic dicit magister P
+Loyola University Chicago
+<A HREF="http://orion.it.luc.edu/~phartman">http://orion.it.luc.edu/~phartman</A>
+gpg --keyserver pgp.mit.edu --recv-keys E0DBD3D6 
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000126.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

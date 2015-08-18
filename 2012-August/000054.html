@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] Ledmac Roadmap
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2012-August/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Ledmac%20Roadmap&In-Reply-To=%3C6381486E-4613-4DFF-B371-7BEA5185C15E%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000053.html">
+   <LINK REL="Next"  HREF="000055.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] Ledmac Roadmap</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Ledmac%20Roadmap&In-Reply-To=%3C6381486E-4613-4DFF-B371-7BEA5185C15E%40maieul.net%3E"
+       TITLE="[Ledmac-users] Ledmac Roadmap">maieul at maieul.net
+       </A><BR>
+    <I>Wed Aug 29 12:06:42 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000053.html">[Ledmac-users] Fwd: Ctan-ann Digest, Vol 421, Issue 5
+</A></li>
+        <LI>Next message: <A HREF="000055.html">[Ledmac-users] Vafa
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Users of Ledmac and Ledpar.
+
+As you know, I maintain Ledmac and ledpar one year ago.
+
+In the previous day, I made some important modification to allow more easy customization of critical footnote. I hope to publish a new release in next day, with the helping of Daniel Gasparotto for documentation. This release will be the last of the series 0.X.
+
+It will include these commands, where X is a series : 
+- \lemmaseparator[X]{sep}, to change separator between lemma and note.
+- \beforelemmasepararor[X]{length}, to add blank before lemma separator.
+- \afterlemmaseparator[X]{length} to add blanck after lemma separator.
+- \nolemmaseparator[X] to disable lemma separator.
+- \nonumberinfootnote[X] to disable line number in critical footnote.
+- \beforenumberinfootnote[X]{length} to add space before line number.
+- \afternumberinfootnote[X]{length} to add space after line number.
+- \afternote[X]{length} to add space after note (in paragraphed footnote).
+- \parafootsep[X]{sep} to change separator betwen note (in paragraphed footnote).
+- \numberonlyfirstinline[X] to print number of line only the first time for each line.
+- \symplinenumber[X] to have a symbol for line number when it the same line (not yet implemented, but will be). It will remplace \symplinenum (but which will be kept for ascendant compatibility).. 
+
+All length can be stretchable, and default value are the actual value.
+
+
+I think there is no break of compatibility. But you must have the package etoolbox and xargs. These packages are install in the recent versions of major TeX distribution (MacTeX, TeXLive and MikTeX). If some break appear, send me an email. 
+
+Thank to ousia for idea, and to Daniel for helping.
+
+The Roadmap for next time is :
+- release 1.0 : new command to created a new series. Just \newfootseries{X} to create X series, with all personalisables functions. I think the X command will be deleted, but put in a &quot;attic&quot; for people which used them. It will be occasion to simplify code. It's need if you want I maintain package in time.
+- release 1.1 : footnote by section / in parallel.
+- release 1.2 : problem with long footnote.
+
+
+-----
+Ma&#239;eul Rouquette
+Assistant dipl&#244;m&#233; en histoire du christianisme ancien et litt&#233;rature apocryphe chr&#233;tienne
+Universit&#233; de Lausanne (FTSR/IRSB)
+<A HREF="http://apocryphes.hypotheses.org">http://apocryphes.hypotheses.org</A>
+<A HREF="http://geekographie.maieul.net/-LaTeX-">http://geekographie.maieul.net/-LaTeX-</A>
+
+
+
+
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000053.html">[Ledmac-users] Fwd: Ctan-ann Digest, Vol 421, Issue 5
+</A></li>
+	<LI>Next message: <A HREF="000055.html">[Ledmac-users] Vafa
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

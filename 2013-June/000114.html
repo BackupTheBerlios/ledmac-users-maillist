@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] page marks in ledmac
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2013-June/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20page%20marks%20in%20ledmac&In-Reply-To=%3C4E1FDB77-30C4-4021-AF4D-274246A5E78D%40gwdg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000113.html">
+   <LINK REL="Next"  HREF="000115.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] page marks in ledmac</H1>
+    <B>Rosenau, Malte</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20page%20marks%20in%20ledmac&In-Reply-To=%3C4E1FDB77-30C4-4021-AF4D-274246A5E78D%40gwdg.de%3E"
+       TITLE="[Ledmac-users] page marks in ledmac">malte.rosenau at theol.uni-goettingen.de
+       </A><BR>
+    <I>Tue Jun 25 18:42:56 CEST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000113.html">[Ledmac-users] Fwd: CTAN Update: eledmac and eledpar
+</A></li>
+        <LI>Next message: <A HREF="000115.html">[Ledmac-users] page marks in ledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114">[ date ]</a>
+              <a href="thread.html#114">[ thread ]</a>
+              <a href="subject.html#114">[ subject ]</a>
+              <a href="author.html#114">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+I've just found out that LaTeX's \markboth mechanism breaks ledmac's output when used within a paragraph.
+
+\documentclass{article}
+\usepackage{eledmac}
+\begin{document}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, \markboth{1}{2} sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  
+\pend
+\endnumbering
+\end{document}
+
+I use a custom pagestyle to print the chapter/verse range for each page into the header (e.g. 1,6--1,12), which makes it necessary to call \markboth several times per paragraph. Is there another way to get this working?
+
+Kind regards,
+Malte
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000113.html">[Ledmac-users] Fwd: CTAN Update: eledmac and eledpar
+</A></li>
+	<LI>Next message: <A HREF="000115.html">[Ledmac-users] page marks in ledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114">[ date ]</a>
+              <a href="thread.html#114">[ thread ]</a>
+              <a href="subject.html#114">[ subject ]</a>
+              <a href="author.html#114">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

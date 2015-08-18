@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] Ledmac/ledpar Wishlist
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2011-August/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Ledmac/ledpar%20Wishlist&In-Reply-To=%3CEF002C0B-93CF-4D39-B1B0-F4CA0D7CD398%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000035.html">
+   <LINK REL="Next"  HREF="000037.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] Ledmac/ledpar Wishlist</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Ledmac/ledpar%20Wishlist&In-Reply-To=%3CEF002C0B-93CF-4D39-B1B0-F4CA0D7CD398%40maieul.net%3E"
+       TITLE="[Ledmac-users] Ledmac/ledpar Wishlist">maieul at maieul.net
+       </A><BR>
+    <I>Sun Aug 21 00:55:14 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000035.html">[Ledmac-users] Ledmac/ledpar Wishlist
+</A></li>
+        <LI>Next message: <A HREF="000037.html">[Ledmac-users] Fwd: CTAN Update: ledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Just one point : when you will open tickets on gitub, please open one ticket by bug and one ticket by needed feature, and always make a little example code :)
+-----
+Ma&#239;eul
+<A HREF="http://blog.maieul.net">http://blog.maieul.net</A>
+<A HREF="http://www.schtroumpfs.maieul.net/">http://www.schtroumpfs.maieul.net/</A>
+
+Le 19 ao&#251;t 2011 &#224; 19:21, Florian Grammel a &#233;crit :
+
+&gt;<i> 
+</I>&gt;<i> Seeing that ledmac/ledpar has a new maintainer, who has quickly found the time to fix an irritating bug (thanks for that, Ma&#239;eul!) I see my chance to propose some fixes, improvements and additions.
+</I>&gt;<i> 
+</I>&gt;<i> The reason why I don't add them directly to github is that I am hoping for some input from you other users on these proposals: 
+</I>&gt;<i> 	Do you agree that these would be good additions? 
+</I>&gt;<i> 	Which ones would you prioritise? (below my own tentative ranking)
+</I>&gt;<i> 	Do you have any good workarounds for the problems I describe?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks for reading/thinking about/commenting!
+</I>&gt;<i> All the best,
+</I>&gt;<i> Florian.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> A: BUGS (?):
+</I>&gt;<i> 
+</I>&gt;<i> 1) Large apparatuses (more than halv the page) makes ledpar go out of sync after some pages.
+</I>&gt;<i> 2) when enlarging the page with a flexible length e.g.
+</I>&gt;<i> \addtolength{\skip\Afootins}{-2.5mm} 
+</I>&gt;<i> but only using the footnoteseries A on *one* side of ledpar, the syncing gets messed up.
+</I>&gt;<i> When I use a fixed length instead, e.g.
+</I>&gt;<i> \setlength{\skip\Afootins}{5mm}
+</I>&gt;<i> the behaviour seems to be ok.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> B: SUGGESTIONS FOR IMPROVEMENTS:
+</I>&gt;<i> 
+</I>&gt;<i> 1) BETTER PAGEBREAK CONTOL: 
+</I>&gt;<i> In the main text I can use \pagebreak in between paragraphs (\pend\pagebreak\pstart) in ledmac, but it is ignored inside a paragraph and completely ignored everywhere in ledpar. I'd really like \pagebreak to work like in standard LaTeX.
+</I>&gt;<i> Footnotes are never broken over page-breaks. Usually this is a good practice, but sometimes, when they get very long (e.g. when one ms adds or replaces a whole paragraph or even chapter) one needs to split them over several pages. Also here a sort of specialised \pagebreak-command would come in very handy.
+</I>&gt;<i> (Can be worked around manually, but VERY cumbersome.)
+</I>&gt;<i> 
+</I>&gt;<i> 2) WIDOW/ORPHAN CONTROL in ledpar. Without 1) it even doing this manually is very difficult.
+</I>&gt;<i> 
+</I>&gt;<i> 3) SECTIONING COMMANDS (\chapter/\section&#8230;) as part of the numbered text. 
+</I>&gt;<i> This applies mainly when editing texts that already have sectioning, that I need to reproduce and possibly add critical remarks to. 
+</I>&gt;<i> Ideally ledmac would have two series of sectioning-commands: The usual ones, that *automatically* stop line-numbering, and a second one, \edchapter, \edsection, &#8230; that have the same formatting as the usual ones, write to leftmark/rightmark, add TOC-entries, *but* are part of the numbered text.
+</I>&gt;<i> (Can be worked around manually, but cumbersome.)
+</I>&gt;<i> 
+</I>&gt;<i> 4) \LEDSIDENOTES WORKING EVERYWHERE, also in (i.e. beside) the apparatus. Cf. e.g. the marginnotes-package.
+</I>&gt;<i> 
+</I>&gt;<i> 5) allow LINE BREAKS AND INDENTS IN THE APPARATUS.
+</I>&gt;<i> 
+</I>&gt;<i> 6) \ledsidenotes shouldn't just be deleted when the next ledsidenote happens to be in the same row &#8211; there should either be a warning and/or automatic pushing them to the next line, preferably both.
+</I>&gt;<i> 
+</I>&gt;<i> 7) draft-mode: I know, it can be changed easily, but italicising is IMO an unfortunate default, as it is used in a number of other contexts (many critical texts use it for abbreviations) and it changes spacing; underlining works reasonably well.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> C: THINGS I'D LOVE TO SEE SOMETIMES IN THE FUTURE:
+</I>&gt;<i> 
+</I>&gt;<i> 1) more than two text-streams for editions with more than two main text versions.
+</I>&gt;<i> 
+</I>&gt;<i> 2) possibility to put the apparatus completely on one side, the text on the other (cf. newer vols. of Corpus Scriptorum Ecclesiasticorum Latinorum)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> 
+</I>&gt;<i> ____________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Florian Grammel
+</I>&gt;<i> 
+</I>&gt;<i> Gentofte, Denmark
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Empfehlen Sie GMX DSL Ihren Freunden und Bekannten und wir
+</I>&gt;<i> belohnen Sie mit bis zu 50,- Euro! <A HREF="https://freundschaftswerbung.gmx.de">https://freundschaftswerbung.gmx.de</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Ledmac-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000035.html">[Ledmac-users] Ledmac/ledpar Wishlist
+</A></li>
+	<LI>Next message: <A HREF="000037.html">[Ledmac-users] Fwd: CTAN Update: ledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

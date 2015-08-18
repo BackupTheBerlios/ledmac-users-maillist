@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] problem with numberonlyfirstinline
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2013-September/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20problem%20with%20numberonlyfirstinline&In-Reply-To=%3C606E3946-EDE3-4B53-AC58-4922A9C851BF%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000123.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] problem with numberonlyfirstinline</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20problem%20with%20numberonlyfirstinline&In-Reply-To=%3C606E3946-EDE3-4B53-AC58-4922A9C851BF%40maieul.net%3E"
+       TITLE="[Ledmac-users] problem with numberonlyfirstinline">maieul at maieul.net
+       </A><BR>
+    <I>Wed Sep 11 17:11:02 CEST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000123.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+        <LI>Next message: <A HREF="000127.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+I have compiled your example.
+
+The problem is for the note linked to line 5-10, isn't it ? For the notes linked to l. 6, 7, 8 and 9. it's running.
+
+The problem is that you want to made the test of displaying with all previous lemma. It's not what \numberonlyfirstinline should do : it is made to do it only for the previous line. Maybe the documentation is quite wrong, but I have never thought to your possibility.
+
+I could try to add this feature, with a new option, if you open an issue on the github page of eledmac.
+
+I hope have time this week, but I can't ensure it.
+
+Ma&#239;eul
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: toto.pdf
+Type: application/pdf
+Size: 11493 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/ledmac-users/attachments/20130911/ae70fc77/attachment-0001.pdf">https://lists.berlios.de/pipermail/ledmac-users/attachments/20130911/ae70fc77/attachment-0001.pdf</A>&gt;
+-------------- next part --------------
+
+-----
+Ma&#239;eul Rouquette
+www.maieul.net
+<A HREF="http://geekographie.maieul.net/">http://geekographie.maieul.net/</A>
+
+Le 11 sept. 2013 &#224; 16:09, Peter John Hartman &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">phartman at luc.edu</A>&gt; a &#233;crit :
+
+&gt;<i> Hi folks,
+</I>&gt;<i> 
+</I>&gt;<i> I recently upgraded from ledmac to eledmac.  I was happy to see that
+</I>&gt;<i> there is a \numberonlyfirstinline, which replaces a lot of nasty
+</I>&gt;<i> code.  However, I have one problem, I can't seem to figure out.  Here 
+</I>&gt;<i> it is:
+</I>&gt;<i> 
+</I>&gt;<i> I have:
+</I>&gt;<i> 
+</I>&gt;<i> \pstart
+</I>&gt;<i>   Secunda conclusio est quod anima est actus sive forma, quia hoc est actus 
+</I>&gt;<i>   \edtext{quo, adveniente}{\lemma{quo adveniente}\Afootnote{quod adveniensS}}
+</I>&gt;<i>   materiae \edtext{vel subiecto praesupposito, aliquid dicitur}{\lemma{vel \ldots\
+</I>&gt;<i>   dicitur}\Afootnote{suo supposito dans hoc S}} esse \edtext{aliquid}{\Afootnote{hoc A hoc add ET}} 
+</I>&gt;<i>   in actu quod non erat ante nisi in potentia.  Hoc est notum ex quid nominis. Sed per animam equi vel asini,
+</I>&gt;<i>   adveniente materiae, equus dicitur \edtext{actualiter}{\Afootnote{actu T}} equus cum ante non esset equus, nisi in potentia.  
+</I>&gt;<i>   \edtext{Et\edlabel{II01NN5} sic de asino. Non}{\lemma{Et \ldots\ Non}\Afootnote{nec ante T}} dicebamus quod
+</I>&gt;<i>   erat \edtext{asinus}{\Afootnote{equus AEST}}, sed quod poterat
+</I>&gt;<i>   esse \edtext{asinus}{\Afootnote{equus AEST}}, \edtext{igitur etc}{\Afootnote{et sic similiter de asino T}}.
+</I>&gt;<i> \pend
+</I>&gt;<i> 
+</I>&gt;<i> \pstart
+</I>&gt;<i>   Item cum animatum sit substantia per se \edtext{subsistens}{\Afootnote{existens T}}
+</I>&gt;<i>   et, hoc aliquid. Materia autem non \edtext{est}{\Afootnote{fit S}} hoc aliquid \edtext{nec}{\Afootnote{om
+</I>&gt;<i>   V}} per se \edtext{subsistens}{\Afootnote{existens T}}, ut \edtext{dicit
+</I>&gt;<i>   Aristoteles}{\af{CFR DEAN II.1 421a2}}.
+</I>&gt;<i>   Sequitur quod animatum non est \edtext{simplex}{\Afootnote{simpliciter S}} materia.  Ergo animatum
+</I>&gt;<i>   est \edtext{substantialiter}{\Afootnote{substantia V}} compositum ex
+</I>&gt;<i>   materia et forma tamquam ex potentia et \edtext{actu}{\linenum{|\xlineref{II01NN5}}\lemma{Et sic de asino \ldots\ actu}\Afootnote{om V }}.
+</I>&gt;<i>   Et ista est compositio ex anima et corpore. Ideo oportet \edtext{vel}{\Afootnote{dicere S}}
+</I>&gt;<i>   quod corpus sit forma et actus animae, quod \edtext{non}{\Afootnote{nullus AEST}} potest dici, vel quod anima
+</I>&gt;<i>   sit actus et forma corporis, quod est
+</I>&gt;<i>   \edtext{propositum}{\Afootnote{compositum S}}.
+</I>&gt;<i> \pend
+</I>&gt;<i> 
+</I>&gt;<i> Focus on the II01NN5 business.  Now, in the apparatus, with
+</I>&gt;<i> \numberonlyfirstinline turned on, *it will not print line numbers in
+</I>&gt;<i> front of the lemma associated with 'Et sic de asino \ldots\ actu'.
+</I>&gt;<i> With \numberonlyfirstinline turned off, *it will*.  Pretty simple!
+</I>&gt;<i> 
+</I>&gt;<i> I can produce more output if you would like.  
+</I>&gt;<i> 
+</I>&gt;<i> Thanks so much in advance.
+</I>&gt;<i> 
+</I>&gt;<i> Peter
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> sic dicit magister P
+</I>&gt;<i> Loyola University Chicago
+</I>&gt;<i> <A HREF="http://orion.it.luc.edu/~phartman">http://orion.it.luc.edu/~phartman</A>
+</I>&gt;<i> gpg --keyserver pgp.mit.edu --recv-keys E0DBD3D6 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Ledmac-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000123.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+	<LI>Next message: <A HREF="000127.html">[Ledmac-users] problem with numberonlyfirstinline
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

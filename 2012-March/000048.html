@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] ledgroupsized and centered apparatuses
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2012-March/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20ledgroupsized%20and%20centered%20apparatuses&In-Reply-To=%3CDAADBF09-FA2B-4FB2-BAF0-CED8C4C13D7E%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000047.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] ledgroupsized and centered apparatuses</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20ledgroupsized%20and%20centered%20apparatuses&In-Reply-To=%3CDAADBF09-FA2B-4FB2-BAF0-CED8C4C13D7E%40maieul.net%3E"
+       TITLE="[Ledmac-users] ledgroupsized and centered apparatuses">maieul at maieul.net
+       </A><BR>
+    <I>Sat Mar 31 13:50:48 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000047.html">[Ledmac-users] ledgroupsized and centered apparatuses
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#48">[ date ]</a>
+              <a href="thread.html#48">[ thread ]</a>
+              <a href="subject.html#48">[ subject ]</a>
+              <a href="author.html#48">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hi, I don't know if the have solution now. Maybe some feature than I could add to next version of ledmac, in summer. 
+
+Could you open one ticket by problem ?<A HREF="https://github.com/maieul/ledmac">https://github.com/maieul/ledmac</A>
+Ma&#239;eul Rouquette
+www.maieul.net
+<A HREF="http://geekographie.maieul.net/">http://geekographie.maieul.net/</A>
+
+Le 31 mars 2012 &#224; 13:36, <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">bernhardkoelbl at bernhardkoelbl.de</A> a &#233;crit :
+
+&gt;<i> Dear ledmac-users,
+</I>&gt;<i> 
+</I>&gt;<i> I want to typeset an edition of a number of small glosses in critical edition. First I thought simply to use the minipage-environmen of Latex, because most of the glosses are very short. But for a better fitting of the text on the book pages, it seems advisable to use ledmacs ledgroupsized environment, because it allows pagebreaks. But there are two problems to be solved:
+</I>&gt;<i> 
+</I>&gt;<i> (1) the apparatuses should be centered (like the main text) - a feature which is not supportet by default (cf. manual p. 9)
+</I>&gt;<i> (2) the line numbers should be placed near the text (by default they are placed in the margin of the page)
+</I>&gt;<i> 
+</I>&gt;<i> Would be nice, if somebody could help me.
+</I>&gt;<i> 
+</I>&gt;<i> B. Koelbl 
+</I>&gt;<i> 
+</I>&gt;<i> minimal example of code:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> \documentclass[10pt,twoside,headinclude]{scrbook} 
+</I>&gt;<i> \usepackage[%                            =&gt; book format 
+</I>&gt;<i> mag=1000,% 
+</I>&gt;<i> a4paper,% 
+</I>&gt;<i> includehead,% 
+</I>&gt;<i> width=130mm,% 
+</I>&gt;<i> height=205mm,% 
+</I>&gt;<i> headsep=7mm,% 
+</I>&gt;<i> layoutsize={170mm,240mm},% 
+</I>&gt;<i> layoutoffset=20mm,% 
+</I>&gt;<i> ]{geometry}% 
+</I>&gt;<i> % 
+</I>&gt;<i> \usepackage[english,latin,ngerman]{babel} 
+</I>&gt;<i> \usepackage{ucs} 
+</I>&gt;<i> \usepackage[utf8x]{inputenc} 
+</I>&gt;<i> \usepackage[T1]{fontenc} 
+</I>&gt;<i> % 
+</I>&gt;<i> \usepackage{blindtext}%                =&gt; only exempli gratia 
+</I>&gt;<i> 
+</I>&gt;<i> %===================================================================== 
+</I>&gt;<i> %        LEDMAC
+</I>&gt;<i> %        I copied the code-snippets from J.-D. Dekkers homepage 
+</I>&gt;<i> %===================================================================== 
+</I>&gt;<i> 
+</I>&gt;<i> \usepackage{ledmac} 
+</I>&gt;<i>  \renewcommand{\notenumfont}{\bfseries\footnotesize} 
+</I>&gt;<i>  \newcommand{\notetextfont}{\normalfont\footnotesize} 
+</I>&gt;<i> 
+</I>&gt;<i> % \let\Afootnoterule=\relax 
+</I>&gt;<i>  \let\Bfootnoterule=\relax 
+</I>&gt;<i>  \let\Cfootnoterule=\relax 
+</I>&gt;<i> 
+</I>&gt;<i>  \addtolength{\skip\Afootins}{1.5mm} 
+</I>&gt;<i> % \addtolength{\skip\Bfootins}{1.5mm} 
+</I>&gt;<i> % \addtolength{\skip\Cfootins}{1.5mm} 
+</I>&gt;<i> 
+</I>&gt;<i>  \makeatletter 
+</I>&gt;<i> 
+</I>&gt;<i>  \renewcommand*{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">para at vfootnote</A>}[2]{% 
+</I>&gt;<i>    \insert\csname #1footins\endcsname 
+</I>&gt;<i>    \bgroup 
+</I>&gt;<i>      \notefontsetup 
+</I>&gt;<i>      \footsplitskips 
+</I>&gt;<i>      \<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsefootspec</A> #2\ledplinenumtrue % new from here 
+</I>&gt;<i>     \ifnum\@nameuse{previous@#<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">1 at number</A>}=\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedstartline</A>\relax 
+</I>&gt;<i>        \ledplinenumfalse 
+</I>&gt;<i>       \fi 
+</I>&gt;<i>       \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at page</A>=\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedstartpage</A>\relax 
+</I>&gt;<i>       \else \ledplinenumtrue \fi 
+</I>&gt;<i>       \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedstartline</A>=\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedendline</A>\relax 
+</I>&gt;<i>       \else \ledplinenumtrue \fi 
+</I>&gt;<i>       \expandafter\xdef\csname previous@#<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">1 at number</A>\endcsname{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedstartline</A>} 
+</I>&gt;<i>       \xdef\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at page</A>{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">l at dparsedstartpage</A>} % to here 
+</I>&gt;<i>       \setbox0=\vbox{\hsize=\maxdimen 
+</I>&gt;<i>         \noindent\csname #1footfmt\endcsname#2}% 
+</I>&gt;<i>        \setbox0=\hbox{\unvxh0}% 
+</I>&gt;<i>        \dp0=0pt 
+</I>&gt;<i>        \ht0=\csname #1footfudgefactor\endcsname\wd0 
+</I>&gt;<i>        \box0 
+</I>&gt;<i>        \penalty0 
+</I>&gt;<i>   \egroup 
+</I>&gt;<i> } 
+</I>&gt;<i> 
+</I>&gt;<i> \newcommand*{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at A</A>@number}{-1} 
+</I>&gt;<i> \newcommand*{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at B</A>@number}{-1} 
+</I>&gt;<i> \newcommand*{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at C</A>@number}{-1} 
+</I>&gt;<i> \newcommand*{\<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">previous at page</A>}{-1} 
+</I>&gt;<i> 
+</I>&gt;<i> \newcommand{\abb}[1]{#1% 
+</I>&gt;<i>           \let\rbracket\nobrak\relax} 
+</I>&gt;<i> \newcommand{\nobrak}{\textnormal{}} 
+</I>&gt;<i> \newcommand{\morenoexpands}{% 
+</I>&gt;<i>           \let\abb=0% 
+</I>&gt;<i> } 
+</I>&gt;<i> 
+</I>&gt;<i> \newcommand{\Aparafootfmt}[3]{% 
+</I>&gt;<i>   \ledsetnormalparstuff 
+</I>&gt;<i>   \scriptsize 
+</I>&gt;<i>   \notenumfont\printlines#1|\enspace 
+</I>&gt;<i>  %\lemmafont#1|#2\enskip 
+</I>&gt;<i>   \notetextfont 
+</I>&gt;<i>   #3\penalty-10\hskip 1em plus 4em minus.4em\relax} 
+</I>&gt;<i> 
+</I>&gt;<i> \newcommand{\Bparafootfmt}[3]{% 
+</I>&gt;<i>   \ledsetnormalparstuff 
+</I>&gt;<i>   \scriptsize 
+</I>&gt;<i>   \notenumfont\printlines#1|% 
+</I>&gt;<i>   \ifledplinenum 
+</I>&gt;<i>    \enspace 
+</I>&gt;<i>   \else 
+</I>&gt;<i>    {\hskip 0em plus 0em minus .3em} 
+</I>&gt;<i>   \fi 
+</I>&gt;<i>   \<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">select at lemmafont</A>#1|#2\rbracket\enskip 
+</I>&gt;<i>   \notetextfont 
+</I>&gt;<i>    #3\penalty-10\hskip 1em plus 4em minus.4em\relax } 
+</I>&gt;<i> 
+</I>&gt;<i>  \newcommand{\Cparafootfmt}[3]{% 
+</I>&gt;<i>    \ledsetnormalparstuff 
+</I>&gt;<i>    \notenumfont\printlines#1|\enspace 
+</I>&gt;<i> %  \lemmafont#1|#2\enskip 
+</I>&gt;<i>    \notetextfont 
+</I>&gt;<i>    #3\penalty-10\hskip 1em plus 4em minus.4em\relax} 
+</I>&gt;<i> 
+</I>&gt;<i>  \makeatother 
+</I>&gt;<i> 
+</I>&gt;<i>  \footparagraph{A} 
+</I>&gt;<i>  \footparagraph{B} 
+</I>&gt;<i>  \footparagraph{C} 
+</I>&gt;<i> 
+</I>&gt;<i>  \let\Afootfmt=\Aparafootfmt 
+</I>&gt;<i>  \let\Bfootfmt=\Bparafootfmt 
+</I>&gt;<i>  \let\Cfootfmt=\Cparafootfmt 
+</I>&gt;<i> 
+</I>&gt;<i>  \emergencystretch40pt 
+</I>&gt;<i>  
+</I>&gt;<i> %================================================================
+</I>&gt;<i> %           TEXT
+</I>&gt;<i> %================================================================ 
+</I>&gt;<i> \begin{document} 
+</I>&gt;<i> \begin{ledgroupsized}[c]{0.75\textwidth} 
+</I>&gt;<i> \beginnumbering 
+</I>&gt;<i> \pstart 
+</I>&gt;<i> \blindtext 
+</I>&gt;<i> \edtext{This}{\Afootnote{This should be an A-footnote, which is a little bit longer, so I use here some more blindtext in latin: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait.}} 
+</I>&gt;<i> \blindtext 
+</I>&gt;<i> \pend 
+</I>&gt;<i> \endnumbering 
+</I>&gt;<i> \end{ledgroupsized} 
+</I>&gt;<i> \end{document} 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Ledmac-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000047.html">[Ledmac-users] ledgroupsized and centered apparatuses
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#48">[ date ]</a>
+              <a href="thread.html#48">[ thread ]</a>
+              <a href="subject.html#48">[ subject ]</a>
+              <a href="author.html#48">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

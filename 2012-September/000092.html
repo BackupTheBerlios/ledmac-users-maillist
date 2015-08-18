@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] Version 1.1 of eledmac/eledpar
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2012-September/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Version%201.1%20of%20eledmac/eledpar&In-Reply-To=%3C35B14465-BD04-4B82-8748-1DF5C50E936E%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000091.html">
+   <LINK REL="Next"  HREF="000093.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] Version 1.1 of eledmac/eledpar</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20Version%201.1%20of%20eledmac/eledpar&In-Reply-To=%3C35B14465-BD04-4B82-8748-1DF5C50E936E%40maieul.net%3E"
+       TITLE="[Ledmac-users] Version 1.1 of eledmac/eledpar">maieul at maieul.net
+       </A><BR>
+    <I>Tue Sep 25 17:50:54 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000091.html">[Ledmac-users] Version 1.1 of eledmac/eledpar
+</A></li>
+        <LI>Next message: <A HREF="000093.html">[Ledmac-users] Formalism for critical variants with eledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I forget two little new command : 
+- seriesatend{series} to put the series at the end of the list of series (for example to print A after B)
+- seriesatbegin{series} to put the series at the end of the list of series (for example to print B before A)
+-----
+Ma&#239;eul Rouquette
+www.maieul.net
+<A HREF="http://geekographie.maieul.net/">http://geekographie.maieul.net/</A>
+
+Le 24 sept. 2012 &#224; 23:51, Ma&#239;eul Rouquette a &#233;crit :
+
+&gt;<i> Dear Friends, 
+</I>&gt;<i> I have just posted the version 1.1 of eledmac and eledpar.
+</I>&gt;<i> 
+</I>&gt;<i> The changes are following. 
+</I>&gt;<i> 
+</I>&gt;<i> I will take a little break on the eledmac/eledpar dev.
+</I>&gt;<i> 
+</I>&gt;<i> List of changes :
+</I>&gt;<i> In eledmac :
+</I>&gt;<i> 	- new package option &quot;parapparatus&quot; : it allows paragraph inside critical notes (except for paragraphed notes)
+</I>&gt;<i> 	- \ledchapter \ledsection \ledsubsection \ledsubsubsection and the starred versions allows critical notes for sectionning command. Read the handbook.
+</I>&gt;<i> 	- new command to add in preamble \labelpstarttrue: if you use it, a \label put just after a \pstart will refer to the pstart number
+</I>&gt;<i> 	- hooks for note customization :
+</I>&gt;<i> 		- Correction on \numberonlyfirstinline with lineation by pstart or by page.
+</I>&gt;<i> 		- Add \numberonlyfirstintwolines[series] : must be used in combination with \numberonlyfirstinline. If you use \numberonlyfirstintwolines, l.2-3 will be distincted from l. 2
+</I>&gt;<i> 		- \pstartinfootnote[series] : print the pstart in the footnote number. Auto enabled with \lineation{pstart} and auto disabled with \lineation{page} and \lineation{section}
+</I>&gt;<i> 		- \onlypstartinfootnote[series] : print only the pstart number in footnotes, and not the line number.
+</I>&gt;<i> 		- \bhookXnote[series]{code}, \bhooknoteX[series]{code}, \bhookXendnote[series]{code} to add an arbitraty code at the begining of a critical/familiara/end note
+</I>&gt;<i> 		- \beforeXnotes[series]{length} \beforenotesX[series]{length} : to define space before critical or familiar footnotes.
+</I>&gt;<i> 		- \txtbeforeXnotes[series]{txt} : to add text before critical footnotes.
+</I>&gt;<i> 		- \maxhXnotes[series]{lenght} and \maxhnotesX[series]{length} : to define the max height of critical / familiar footnotes. Read the handbook
+</I>&gt;<i> 	- \preXnotes{length} and \prenotesX{length} can be use to define the space before the first series of critical/critical footnotes of the pages, instead of the value defined by \beforeXnotes[series]{length} / \beforenotesX[series]{length}
+</I>&gt;<i> 	- when two (or more) sidenotes are in the same line, they are both printed, separated by a comma. But you can redefine \sidenotesep to change this separator.
+</I>&gt;<i> 
+</I>&gt;<i> In eledpar : 
+</I>&gt;<i> 	- compatibility with eledmac 1.1 
+</I>&gt;<i> 	- the option &quot;shiftedverses&quot; becomes &quot;shiftedpstart&quot;. And so \shiftedversestrue becomes \shiftedpstartstrue and \shiftedversesfalse becomes \shiftedpstartsfalse
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----
+</I>&gt;<i> Ma&#239;eul Rouquette
+</I>&gt;<i> Assistant dipl&#244;m&#233; en histoire du christianisme ancien et litt&#233;rature apocryphe chr&#233;tienne
+</I>&gt;<i> Universit&#233; de Lausanne (FTSR/IRSB)
+</I>&gt;<i> <A HREF="http://apocryphes.hypotheses.org">http://apocryphes.hypotheses.org</A>
+</I>&gt;<i> <A HREF="http://geekographie.maieul.net/-LaTeX-">http://geekographie.maieul.net/-LaTeX-</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Ledmac-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000091.html">[Ledmac-users] Version 1.1 of eledmac/eledpar
+</A></li>
+	<LI>Next message: <A HREF="000093.html">[Ledmac-users] Formalism for critical variants with eledmac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] Trying ledmac and ledpar 1.0 &#223;
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2012-September/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20%3D%3Fiso-8859-1%3Fq%3FTrying_ledmac_and_ledpar_1%3D2E0_%3DDF%3F%3D&In-Reply-To=%3C9DFB7749-CC21-4EA7-8752-212E327879C0%40maieul.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000060.html">
+   <LINK REL="Next"  HREF="000062.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] Trying ledmac and ledpar 1.0 &#223;</H1>
+    <B>Ma&#239;eul Rouquette</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20%3D%3Fiso-8859-1%3Fq%3FTrying_ledmac_and_ledpar_1%3D2E0_%3DDF%3F%3D&In-Reply-To=%3C9DFB7749-CC21-4EA7-8752-212E327879C0%40maieul.net%3E"
+       TITLE="[Ledmac-users] Trying ledmac and ledpar 1.0 &#223;">maieul at maieul.net
+       </A><BR>
+    <I>Sat Sep  8 12:39:08 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000060.html">[Ledmac-users] Fwd: CTAN Update: Ledmac/ledpar
+</A></li>
+        <LI>Next message: <A HREF="000062.html">[Ledmac-users] Lemac 1.0 beta 2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#61">[ date ]</a>
+              <a href="thread.html#61">[ thread ]</a>
+              <a href="subject.html#61">[ subject ]</a>
+              <a href="author.html#61">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Friends,
+
+as you can have seen, previous days were intensif in ledmac / ledpar activity.
+
+Actually, in CTAN, the published version is 0.18.1 / 0.13. 
+
+Theses versions have some bugs, due to introduction of optional argument in \Xfootnotes. These bug have been corrected this week (and this morning !). The official stable version is 0.18.3/0.13.2. I post it in the CTAN this morning, but it seems CTAN webmasters are not actif yet. I hope they will publish it, but ...
+
+In //, I prepare an ledmac and ledpar 1.0 version.
+
+The main idea of these versions is to provide a new command : \newseries{series}, which add new series of Xfootnote Xend footnoteX etc. For example : \newseries{F,G}. This implies some code refactoring, which is, in all case, needed to help to add new features in future.
+
+One little change is also that the formating options like \nolemmaseparator can take a list of series in first args : 
+
+&lt;code&gt;
+\nolemmaseparator[B,C] 
+&lt;/code&gt;
+instead of :
+&lt;code&gt;
+\nolemmaseparator[B]
+\nolemmaseparator[C]
+&lt;/code&gt;
+
+Actually, I think the code is stable, but the documentation need to be reformating. But as I wanted to have some feedbacks, I propos you to test the &#946; 1.
+
+To do it :
+- download <A HREF="https://github.com/maieul/ledmac/zipball/mac1.0%CE%B21-par1.0%CE%B21-arab0.1">https://github.com/maieul/ledmac/zipball/mac1.0%CE%B21-par1.0%CE%B21-arab0.1</A>
+- compile the .ins files to obtain the .sty files
+- put the .sty files aside your .tex file
+- try to compile
+- send me a email to explain errors you will see, or better, open a ticket in  <A HREF="https://github.com/maieul/ledmac/issues">https://github.com/maieul/ledmac/issues</A> (it's free)
+
+
+Note that \addfootins and \addfootinsX are deprecated : and error message will printed, explaining that you should use \newseries instead.
+
+Thank a lot
+-----
+Ma&#239;eul Rouquette
+Assistant dipl&#244;m&#233; en histoire du christianisme ancien et litt&#233;rature apocryphe chr&#233;tienne
+Universit&#233; de Lausanne (FTSR/IRSB)
+<A HREF="http://apocryphes.hypotheses.org">http://apocryphes.hypotheses.org</A>
+<A HREF="http://geekographie.maieul.net/-LaTeX-">http://geekographie.maieul.net/-LaTeX-</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000060.html">[Ledmac-users] Fwd: CTAN Update: Ledmac/ledpar
+</A></li>
+	<LI>Next message: <A HREF="000062.html">[Ledmac-users] Lemac 1.0 beta 2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#61">[ date ]</a>
+              <a href="thread.html#61">[ thread ]</a>
+              <a href="subject.html#61">[ subject ]</a>
+              <a href="author.html#61">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

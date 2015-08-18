@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] sectioning commands in ledmac,	white spaces and the Geometry package
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-April/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20sectioning%20commands%20in%20ledmac%2C%0A%09white%20spaces%20and%20the%20Geometry%20package&In-Reply-To=%3C79887.89998.qm%40web25603.mail.ukl.yahoo.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] sectioning commands in ledmac,	white spaces and the Geometry package</H1>
+    <B>James Dobreff</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20sectioning%20commands%20in%20ledmac%2C%0A%09white%20spaces%20and%20the%20Geometry%20package&In-Reply-To=%3C79887.89998.qm%40web25603.mail.ukl.yahoo.com%3E"
+       TITLE="[Ledmac-users] sectioning commands in ledmac,	white spaces and the Geometry package">commercium2000 at yahoo.se
+       </A><BR>
+    <I>Fri Apr 23 17:53:06 CEST 2010</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#27">[ date ]</a>
+              <a href="thread.html#27">[ thread ]</a>
+              <a href="subject.html#27">[ subject ]</a>
+              <a href="author.html#27">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Re: sectioning commands
+
+I've been using Ledmac for the last two years and am very happy to see this list is going. I saw Florian's comment about problems with sectioning commands in Ledmac. I keep them out of the numbered text, inserting them between \pend and \pstart. They are not included in the line numbering, but most critical editions -- at least for Latin texts -- don't include them as parts of the texts. In that respect, the author of Ledmac was following common practice in not letting them be numbered. 
+
+
+Re: unwanted white spaces
+
+I have also found that using \pend and \pstart gives me more control over Ledmac than \autopar. But Ledmac is very sensitive to where you place the \pend. If \pend is more than two lines from the last line of a paragraph, it seems to cause white space to appear between lines in the text. Keeping \pend right at the end of a paragraph or on the line immediately after has eliminated the problem.
+
+
+Re: unstable lines of text
+
+Like Rebecca from U. of Chicago, I encountered some problems when my apparatus criticus got to a certain size, which triggered a floating line that would shift from one page to the next with each run of Ledmac -- it was driving me nuts because it only happened after I had spent hours coding these very complex pages. I believe the problem is in the interaction between the Geometry package and the apparatus criticus. By trial and error, I found that Ledmac doesn't like certain combinations of text width and height in the Geometry package, but that it prefers there to be only one setting or specification. Now, I have only defined text height and I let Geometry automatically set the width, and the problem with shifting lines in relation to a large apparatus criticus has vanished. 
+
+James Dobreff, PhD
+Editor and manager of the Daniel Rolander Project
+
+
+
+
+
+
+*After* you defined your contents -- either in the pages- or in the pairs-environment -- you still have to trigger the output itself. For parallel pages this is done by the command 
+\Pages
+for parallel columns (cf p. 5 of the docs)
+\Columns
+
+
+So if you write
+
+&gt;<i> \end{pairs}
+</I>\Columns
+&gt;<i> \end{document}
+</I>
+
+your code typesets just fine. 
+
+You also might want to remove the \chapter{} from the numbered text, as you won't get any good result. Sectioning-commands are a problem in ledmac in general.
+I haven't worked with poery yet, but for prose, I've usually only &quot;faked&quot; the appearance of headings with formating commands. If somebody has a better way to do this, I'd love to hear about it though...
+
+
+Best regards
+Florian. 
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/ledmac-users/attachments/20100423/e9c9885a/attachment.html">https://lists.berlios.de/pipermail/ledmac-users/attachments/20100423/e9c9885a/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#27">[ date ]</a>
+              <a href="thread.html#27">[ thread ]</a>
+              <a href="subject.html#27">[ subject ]</a>
+              <a href="author.html#27">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

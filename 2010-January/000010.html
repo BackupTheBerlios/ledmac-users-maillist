@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] White space
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C201001192130.41927.arash.zeini%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000008.html">
+   <LINK REL="Next"  HREF="000012.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] White space</H1>
+    <B>Arash Zeini</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20White%20space&In-Reply-To=%3C201001192130.41927.arash.zeini%40gmail.com%3E"
+       TITLE="[Ledmac-users] White space">arash.zeini at gmail.com
+       </A><BR>
+    <I>Tue Jan 19 22:30:41 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000008.html">[Ledmac-users] White space
+</A></li>
+        <LI>Next message: <A HREF="000012.html">[Ledmac-users] White space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Tuesday 19 January 2010, Oliver Heins wrote:
+&gt;<i> Hi Arash,
+</I>&gt;<i> 
+</I>&gt;<i> the problem lies within your use of \SingleSpacing and \DoubleSpacing.
+</I>&gt;<i> When I set the \baselineskip manually instead, everything seems to
+</I>&gt;<i> work.  When you change these lines to \baselineskip=10pt
+</I>&gt;<i> resp. \baselineskip=20pt everything works.
+</I>
+Thank you very much. Yes, this takes care of problem no. 1 and 2. However, as 
+you can see in the snapshot, it leaves me with some uneven spacing!
+
+Does this also mean that the spacing between the lines of an entry cannot 
+differ from that between two entries? That's what I was hoping to achieve.
+
+&gt;<i> Personally, I don't use the memoir class.  You should perhaps ask on
+</I>&gt;<i> their mailing list (if their is any) or in comp.text.tex.
+</I>
+I changed to memoir recently. Before that I was using KOMA.
+
+Thanks again,
+Arash
+
+&gt;<i> HTH,
+</I>&gt;<i>  olli
+</I>&gt;<i> 
+</I>&gt;<i> Arash Zeini &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">arash.zeini at gmail.com</A>&gt; writes:
+</I>&gt;<i> &gt; On Wednesday 09 December 2009, Oliver Heins wrote:
+</I>&gt;<i> &gt;&gt; arash.zeini at gmail.com (Arash Zeini) writes:
+</I>&gt;<i> &gt;&gt; &gt; Dear All,
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; I have the pleasure of posting the first question :)
+</I>&gt;<i> &gt;&gt; &gt; I am using the following code from one of the ledmac examples to
+</I>&gt;<i> &gt;&gt; &gt; format my critical notes:
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; \renewcommand*{\threecolfootfmt}[3]{%
+</I>&gt;<i> &gt;&gt; &gt; \singlespacing
+</I>&gt;<i> &gt;&gt; &gt; \normal at pars
+</I>&gt;<i> &gt;&gt; &gt; \hsize .3\hsize
+</I>&gt;<i> &gt;&gt; &gt; \setlength{\parindent}{0pt}
+</I>&gt;<i> &gt;&gt; &gt; \tolerance=5000
+</I>&gt;<i> &gt;&gt; &gt; \raggedright
+</I>&gt;<i> &gt;&gt; &gt; \hangindent2.5em \hangafter1
+</I>&gt;<i> &gt;&gt; &gt; \leavevmode
+</I>&gt;<i> &gt;&gt; &gt; \strut\hbox to 1.3em{\notenumfont\printlines#1|\hfil}\ignorespaces
+</I>&gt;<i> &gt;&gt; &gt; {\select at lemmafont#1|#2}\rbracket\enskip
+</I>&gt;<i> &gt;&gt; &gt; #3\strut\par\allowbreak}
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; How can I control the amount of white space between each critical
+</I>&gt;<i> &gt;&gt; &gt; note?
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; Many thanks and regards,
+</I>&gt;<i> &gt;&gt; &gt; Arash
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Hi Arash,
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; can you post a minimal *working* example (i.e. with preamble,
+</I>&gt;<i> &gt;&gt; \begin{document}...\end{document} and such stuff)?
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Regards,
+</I>&gt;<i> &gt;&gt;  olli
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Hi Oliver,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I am sorry it took me so long to reply. I am attaching the simplest
+</I>&gt;<i> &gt; possible example that reproduces my critical apparatus (CA). So, the
+</I>&gt;<i> &gt; question is:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 1. How can I reduce the white space between two separate entries in the
+</I>&gt;<i> &gt; CA? \interparanoteglue{1em plus .4em minus .4em} is of no use since I am
+</I>&gt;<i> &gt; not using paragraph footnotes.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Now that we are at it, let me add two more questions:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 2. How can I reduce the white space between the first entry in the CA and
+</I>&gt;<i> &gt; the footnote rule? If you compare the first entry for line 3 with the
+</I>&gt;<i> &gt; first entry for line 1, you will notice that entry 3 is positioned
+</I>&gt;<i> &gt; higher. Where is the white space in the first entry coming from?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 3. How can I add &quot;automatic&quot; indentation for any second lines in the CA
+</I>&gt;<i> &gt; that break into the next line? See second line of the first entry.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks and best wishes,
+</I>&gt;<i> &gt; Arash
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; Ledmac-users mailing list
+</I>&gt;<i> &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">Ledmac-users at lists.berlios.de</A>
+</I>&gt;<i> &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/ledmac-users">https://lists.berlios.de/mailman/listinfo/ledmac-users</A>
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000008.html">[Ledmac-users] White space
+</A></li>
+	<LI>Next message: <A HREF="000012.html">[Ledmac-users] White space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Ledmac-users] verse formatting from newbie
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ledmac-users/2010-March/index.html" >
+   <LINK REL="made" HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20verse%20formatting%20from%20newbie&In-Reply-To=%3C4B92BBEB.4090504%40web.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000019.html">
+   <LINK REL="Next"  HREF="000023.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Ledmac-users] verse formatting from newbie</H1>
+    <B>Pablo Rodr&#237;guez</B> 
+    <A HREF="mailto:ledmac-users%40lists.berlios.de?Subject=Re%3A%20%5BLedmac-users%5D%20verse%20formatting%20from%20newbie&In-Reply-To=%3C4B92BBEB.4090504%40web.de%3E"
+       TITLE="[Ledmac-users] verse formatting from newbie">oinos at web.de
+       </A><BR>
+    <I>Sat Mar  6 21:32:43 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000019.html">[Ledmac-users] Ledpar
+</A></li>
+        <LI>Next message: <A HREF="000023.html">[Ledmac-users] verse formatting from newbie
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi there,
+
+I'm totally new to ledmac and ledpar.
+
+Tinkering with the documentation, I managed to produce the source
+document bellow, which I compile without errors, but without text too ;-).
+
+I must be missing the most basic command to compose verse, but I don't
+know which one it is.
+
+Could anyone be so kind to tell me what I'm doing wrong or what I am
+missing?
+
+Thanks,
+
+
+Pablo
+
+
+&#65279;\documentclass[11pt]{book}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{KerkisSans}
+\usepackage[paperheight=21cm,paperwidth=15cm]{geometry}
+\usepackage[a4,cam,center]{crop}
+
+\usepackage{ledmac,ledpar}
+\renewcommand{\Rlineflag}{}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\usepackage[polutonikogreek,spanish]{babel}
+\renewcommand{\greektext}{}\renewcommand{\latintext}{}
+\setcounter{secnumdepth}{-1}
+
+\newcommand{\interstanza}{\par\mbox{}\skipnumbering}
+
+\begin{document}
+
+\tableofcontents
+
+\begin{pairs}
+\setstanzaindents{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+\begin{Leftside}
+\selectlanguage{polutonikogreek}
+\linenummargin{outer}\sidenotemargin{inner}\firstlinenum{5}\linenumincrement{5}
+
+\beginnumbering
+
+\chapter{&#7977; &#960;&#972;&#955;&#953;&#962;}
+
+\begin{astanza}
+&#917;&#7990;&#960;&#949;&#962;&#183; &#171;&#920;&#8048; &#960;&#940;&#947;&#969; &#963;&#8217; &#7940;&#955;&#955;&#951; &#947;&#8134;, &#952;&#8048; &#960;&#940;&#947;&#969; &#963;&#8217; &#7940;&#955;&#955;&#951; &#952;&#940;&#955;&#945;&#963;&#963;&#945;. &amp;
+&#924;&#953;&#8048; &#960;&#972;&#955;&#953;&#962; &#7940;&#955;&#955;&#951; &#952;&#8048; &#946;&#961;&#949;&#952;&#949;&#8150; &#954;&#945;&#955;&#955;&#943;&#964;&#949;&#961;&#951; &#7936;&#960;&#8217; &#945;&#8016;&#964;&#942;. &amp;
+&#922;&#940;&#952;&#949; &#960;&#961;&#959;&#963;&#960;&#940;&#952;&#949;&#953;&#940; &#956;&#959;&#965; &#956;&#953;&#8048; &#954;&#945;&#964;&#945;&#948;&#943;&#954;&#951; &#949;&#7990;&#957;&#945;&#953; &#947;&#961;&#945;&#966;&#964;&#8134;&#183; &amp;
+&#954;&#8217; &#949;&#7986;&#957;&#8217; &#7969; &#954;&#945;&#961;&#948;&#953;&#940; &#956;&#959;&#965; &#8212;&#963;&#8048;&#957; &#957;&#949;&#954;&#961;&#972;&#962;&#8212; &#952;&#945;&#956;&#941;&#957;&#951;. &amp;
+&#8009; &#957;&#959;&#8166;&#962; &#956;&#959;&#965; &#8033;&#962; &#960;&#972;&#964;&#949; &#956;&#8050;&#962; &#963;&#964;&#8056;&#957; &#956;&#945;&#961;&#945;&#963;&#956;&#8056;&#957; &#945;&#8016;&#964;&#8056;&#957; &#952;&#8048; &#956;&#941;&#957;&#949;&#953;. &amp;
+&#8013;&#960;&#959;&#965; &#964;&#8056; &#956;&#940;&#964;&#953; &#956;&#959;&#965; &#947;&#965;&#961;&#943;&#963;&#969;, &#8005;&#960;&#959;&#965; &#954;&#953; &#7938;&#957; &#948;&#8182; &amp;
+&#7952;&#961;&#949;&#943;&#960;&#953;&#945; &#956;&#945;&#8166;&#961;&#945; &#964;&#8134;&#962; &#950;&#969;&#8134;&#962; &#956;&#959;&#965; &#946;&#955;&#941;&#960;&#969; &#7952;&#948;&#8182;, &amp;
+&#960;&#959;&#8166; &#964;&#972;&#963;&#945; &#967;&#961;&#972;&#957;&#953;&#945; &#960;&#941;&#961;&#945;&#963;&#945; &#954;&#945;&#8054; &#961;&#942;&#956;&#945;&#958;&#945; &#954;&#945;&#8054; &#967;&#940;&#955;&#945;&#963;&#945;.&#187; &amp;
+\interstanza
+&#922;&#945;&#953;&#957;&#959;&#973;&#961;&#947;&#953;&#959;&#965;&#962; &#964;&#972;&#960;&#959;&#965;&#962; &#948;&#8050;&#957; &#952;&#8048; &#946;&#961;&#949;&#8150;&#962;, &#948;&#8050;&#957; &#952;&#940;&#946;&#961;&#949;&#953;&#962; &#7940;&#955;&#955;&#949;&#962; &#952;&#940;&#955;&#945;&#963;&#963;&#949;&#962;. &amp;
+&#7977; &#960;&#972;&#955;&#953;&#962; &#952;&#8048; &#963;&#8050; &#7936;&#954;&#959;&#955;&#959;&#965;&#952;&#949;&#8150;. &#931;&#964;&#959;&#8058;&#962; &#948;&#961;&#972;&#956;&#959;&#965;&#962; &#952;&#8048; &#947;&#965;&#961;&#957;&#8119;&#962; &amp;
+&#964;&#959;&#8058;&#962; &#7988;&#948;&#953;&#959;&#965;&#962;. &#922;&#945;&#8054; &#963;&#964;&#8050;&#962; &#947;&#949;&#953;&#964;&#959;&#957;&#953;&#8050;&#962; &#964;&#8050;&#962; &#7988;&#948;&#953;&#949;&#962; &#952;&#8048; &#947;&#949;&#961;&#957;&#8119;&#962;&#183; &amp;
+&#954;&#945;&#8054; &#956;&#8050;&#962; &#963;&#964;&#8048; &#7988;&#948;&#953;&#945; &#963;&#960;&#943;&#964;&#953;&#945; &#945;&#8016;&#964;&#8048; &#952;&#8217; &#7936;&#963;&#960;&#961;&#943;&#950;&#949;&#953;&#962;. &amp;
+&#928;&#940;&#957;&#964;&#945; &#963;&#964;&#8052;&#957; &#960;&#972;&#955;&#953; &#945;&#8016;&#964;&#8052; &#952;&#8048; &#966;&#952;&#940;&#957;&#949;&#953;&#962;. &#915;&#953;&#8048; &#964;&#8048; &#7936;&#955;&#955;&#959;&#8166; &#8212;&#956;&#8052; &#7952;&#955;&#960;&#943;&#950;&#949;&#953;&#962;&#8212; &amp;
+&#948;&#8050;&#957; &#7956;&#967;&#949;&#953; &#960;&#955;&#959;&#8150;&#959; &#947;&#953;&#8048; &#963;&#941;, &#948;&#8050;&#957; &#7956;&#967;&#949;&#953; &#8001;&#948;&#972;. &amp;
+&#7964;&#964;&#963;&#953; &#960;&#959;&#8166; &#964;&#8052; &#950;&#969;&#942; &#963;&#959;&#965; &#961;&#942;&#956;&#945;&#958;&#949;&#962; &#7952;&#948;&#8182; &amp;
+&#963;&#964;&#8052;&#957; &#954;&#974;&#967;&#951; &#964;&#959;&#973;&#964;&#951; &#964;&#8052;&#957; &#956;&#953;&#954;&#961;&#942;, &#963;&#8217; &#8005;&#955;&#951;&#957; &#964;&#8052;&#957; &#947;&#8134; &#964;&#8052;&#957; &#967;&#940;&#955;&#945;&#963;&#949;&#962;. \&amp;
+\end{astanza}
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\selectlanguage{spanish}
+\linenummargin{outer}\sidenotemargin{inner}\firstlinenum{5}\linenumincrement{5}
+
+\beginnumbering
+\chapter{La ciudad}
+
+\begin{astanza}
+Dijiste: &#8220;Ir&#233; a otra ciudad, ir&#233; a otro mar. &amp;
+Otra ciudad ha de hallarse mejor que &#233;sta. &amp;
+Todo esfuerzo m&#237;o es una condena escrita; &amp;
+y est&#225; mi coraz&#243;n &#8212;como un cad&#225;ver&#8212; sepultado. &amp;
+Mi esp&#237;ritu hasta cu&#225;ndo permanecer&#225; en este marasmo. &amp;
+Donde mis ojos vuelva, donde quiera que mire &amp;
+oscuras ruinas de mi vida veo aqu&#237;, &amp;
+donde tantos a&#241;os pas&#233; y destru&#237; y perd&#237;&#8221;. &amp;
+\interstanza
+Nuevas tierras no hallar&#225;s, no hallar&#225;s otros mares. &amp;
+La ciudad te seguir&#225;. Vagar&#225;s &amp;
+por las mismas calles. Y en los mismos barrios te har&#225;s viejo &amp;
+y en estas mismas casas encanecer&#225;s. &amp;
+Siempre llegar&#225;s a esta ciudad. Para otro lugar &#8212;no esperes&#8212; &amp;
+no hay barco para ti, no hay camino. &amp;
+As&#237; como tu vida la arruinaste aqu&#237; &amp;
+en este rinc&#243;n peque&#241;o, en toda tierra la destruiste. \&amp;
+\end{astanza}
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\end{document}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000019.html">[Ledmac-users] Ledpar
+</A></li>
+	<LI>Next message: <A HREF="000023.html">[Ledmac-users] verse formatting from newbie
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ledmac-users">More information about the Ledmac-users
+mailing list</a><br>
+</body></html>
